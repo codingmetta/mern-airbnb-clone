@@ -9,10 +9,14 @@ module.exports = {
     "./node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    colors: {
+        primary : '#FF385C',
+    },
     extend: {
       fontFamily: {
         logo: "Poppins",
       },
+
     },
   },
   plugins: [

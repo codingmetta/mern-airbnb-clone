@@ -9,7 +9,7 @@ export default function SearchBar() {
                     <div className=" pl-4 pr-4 ">Eine Woche</div>
                     <div className="pl-4  flex items-center font-thin text-zinc-400">
                         <span className="pr-5">Gäste hinzufügen</span>
-                        <button className="rounded-full w-6 h-6 bg-[#FF385C] scale-[1.3]">
+                        <button className="rounded-full w-6 h-6 bg-primary scale-[1.3]">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" strokeWidth={3.5} className="relative scale-[0.95] stroke-white translate-y-1.5 translate-x-1.5">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                                 </svg>
