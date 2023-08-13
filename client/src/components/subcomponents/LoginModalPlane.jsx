@@ -5,7 +5,7 @@ import { HiMail } from 'react-icons/hi';
 export default function LoginModalPlane() {
     return (
         <>
-            <div id="defaultModal" tabindex="-1" aria-hidden="true" className="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div id="defaultModalLogin" tabindex="-1" aria-hidden="true" className="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
                 <div className="relative w-full max-w-lg max-h-full">
                     <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
                         {/*Modal Header Section*/}
@@ -53,12 +53,19 @@ export default function LoginModalPlane() {
                                         type="password"
                                     />
                                 </div>
-                                <div className="flex items-center gap-2">
-                                    <Checkbox id="remember" />
-                                    <Label htmlFor="remember">
-                                        Eingeloggt bleiben
-                                    </Label>
+                                <div className="flex text-sm  items-center justify-between ">
+                                    <div className="flex gap-2 pr-2 items-center ">
+                                        <Checkbox id="remember" />
+                                        <Label htmlFor="remember" className="text-gray-400 font-medium">
+                                            Eingeloggt bleiben
+                                        </Label>
+                                    </div>
+                                    <div className="pr-2">
+                                        <div className=" text-primary underline">Registrieren</div>
+                                    </div>
+
                                 </div>
+                                
                             </div>
 
                             {/*Modal Submit Section*/}
