@@ -1,17 +1,26 @@
 'use client';
-import { Button, Checkbox, Label, TextInput } from 'flowbite-react';
+import { Button, Label, TextInput } from 'flowbite-react';
 import { HiMail } from 'react-icons/hi';
 import { useState } from 'react';
-import axios from "axios";
+import axios from 'axios';
 
 
 export default function RegisterModalPlane() {
-    const [vorname, setVorname] = useState('Gustav');
+    const [firstname, setFirstname] = useState('');
+    const [lastname, setLastname] = useState('');
+    const [email, setEmail] = useState('@gmx.de');
+    const [password, setPassword] = useState('');
 
 
-    function registerUser(e){
+    async function registerUser(e){
         e.preventDefault();
-        axios.get("http://localhost:4000/test");
+        await axios.post('/register', {
+            firstname,
+            lastname,
+            email,
+            password
+        });
+        alert ('Du hast dich erfolgreich registriert. Du kannst dich nun einloggen!')
     };
     return (
         <>
@@ -38,12 +47,14 @@ export default function RegisterModalPlane() {
                                 <div>
                                     <div className="hidden mb-2 block">
                                         <Label
-                                            htmlFor="nachname"
-                                            value="nachname"
+                                            htmlFor="lastname"
+                                            value="Nachname"
                                         />
                                     </div>
                                     <TextInput
-                                        id="nachname"
+                                        value={lastname}
+                                        onChange={e =>setLastname(e.target.value)}
+                                        id="lastname"
                                         placeholder="Nachname"
                                         required
                                         type="text"
@@ -52,14 +63,14 @@ export default function RegisterModalPlane() {
                                 <div>
                                     <div className="hidden mb-2 block">
                                         <Label
-                                            htmlFor="vorname"
-                                            value="vorname"
+                                            htmlFor="firstname"
+                                            value="Vorname"
                                         />
                                     </div>
                                     <TextInput
-                                        value={vorname}
-                                        onChange={e =>setVorname(e.target.value)}
-                                        id="vorname"
+                                        value={firstname}
+                                        onChange={e =>setFirstname(e.target.value)}
+                                        id="firstname"
                                         placeholder="Vorname"
                                         required
                                         type="text"
@@ -73,9 +84,11 @@ export default function RegisterModalPlane() {
                                         />
                                     </div>
                                     <TextInput
+                                        value={email}
+                                        onChange={e =>setEmail(e.target.value)}
                                         rightIcon={HiMail}
                                         id="email1"
-                                        placeholder="user@gmx.com"
+                                        placeholder="benutzer*in@gmx.com"
                                         required
                                         type="email"
                                     />
@@ -88,22 +101,9 @@ export default function RegisterModalPlane() {
                                         />
                                     </div>
                                     <TextInput
+                                        value={password}
+                                        onChange={e =>setPassword(e.target.value)}
                                         id="passwordFirst"
-                                        placeholder="*******"
-                                        required
-                                        type="password"
-                                    />
-                                </div>
-
-                                <div>
-                                    <div className=" mb-2 block">
-                                        <Label
-                                            htmlFor="passwordSecond"
-                                            value="Passwort wiederholen"
-                                        />
-                                    </div>
-                                    <TextInput
-                                        id="passwordSecond"
                                         placeholder="*******"
                                         required
                                         type="password"
@@ -115,21 +115,14 @@ export default function RegisterModalPlane() {
                             {/*Modal Submit Section*/}
                             <div className="flex flex-col items-center pb-6 pt-2">
                                 <div className="flex p-4 w-full rounded-b dark:border-gray-600">
-                                    <Button type="submit" data-modal-hide="defaultModal" className="bg-primary w-full shadow-sm shadow-primary/50 text-white focus:ring-2 focus:ring-primary/50 focus:outline-none ">
+                                    <Button type="submit" className="bg-primary w-full shadow-sm shadow-primary/50 text-white focus:ring-2 focus:ring-primary/50 focus:outline-none ">
                                         Registrieren
                                     </Button>
                                 </div>
 
                                 <div className="flex text-sm  items-center justify-between ">
-                                    <div className="hidden flex gap-2 pr-2 items-center ">
-                                        <Checkbox id="remember" />
-                                        <Label htmlFor="remember" className="text-gray-400 font-medium">
-                                            Eingeloggt bleiben
-                                        </Label>
-                                    </div>
-
                                     <div className="pr-2">
-                                        <div className=" text-primary underline">Einloggen</div>
+                                      <div className=" text-primary underline"> Du bist bereits registriert? Hier Einloggen.</div>
                                     </div>
                                 </div>
                             </div>

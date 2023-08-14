@@ -24,11 +24,11 @@ export default function AvatarMenu() {
                 <div id="dropdownNavbar" className="z-10  tracking-wide text-sm font-extralight hidden bg-white divide-y divide-gray-100 rounded-xl shadow-[0px_0px_14px_0px_rgba(0,0,0,0.1)] w-56 dark:bg-gray-700 dark:divide-gray-600">
                     <ul className="py-2 text-sm text-gray-700 dark:text-gray-400 space-y-1" aria-labelledby="dropdownLargeButton">
                         <li>
-                            
+                        <Link>
                                 <label data-modal-target="defaultModalRegister" data-modal-toggle="defaultModalRegister" className="text-sm font-medium text-gray-700 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" type="button">
                                     Registrieren
                                 </label>
-                            
+                         </Link>
                         </li>
 
                         {/*Element toggles modal Login*/}
