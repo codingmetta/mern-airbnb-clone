@@ -12,15 +12,20 @@ export default function RegisterModalPlane() {
     const [password, setPassword] = useState('');
 
 
-    async function registerUser(e){
-        e.preventDefault();
-        await axios.post('/register', {
-            firstname,
-            lastname,
-            email,
-            password
-        });
-        alert ('Du hast dich erfolgreich registriert. Du kannst dich nun einloggen!')
+    async function registerUser(ev){
+        ev.preventDefault();
+
+        try {
+            await axios.post('/register', {
+                firstname,
+                lastname,
+                email,
+                password
+            });
+            alert ('Du hast dich erfolgreich registriert. Du kannst dich nun einloggen!')
+        } catch (e) {
+            alert ('Oops! Diese E-Mailadresse existiert bereits.')
+        }
     };
     return (
         <>
@@ -53,7 +58,7 @@ export default function RegisterModalPlane() {
                                     </div>
                                     <TextInput
                                         value={lastname}
-                                        onChange={e =>setLastname(e.target.value)}
+                                        onChange={ev =>setLastname(ev.target.value)}
                                         id="lastname"
                                         placeholder="Nachname"
                                         required
@@ -69,7 +74,7 @@ export default function RegisterModalPlane() {
                                     </div>
                                     <TextInput
                                         value={firstname}
-                                        onChange={e =>setFirstname(e.target.value)}
+                                        onChange={ev =>setFirstname(ev.target.value)}
                                         id="firstname"
                                         placeholder="Vorname"
                                         required
@@ -85,7 +90,7 @@ export default function RegisterModalPlane() {
                                     </div>
                                     <TextInput
                                         value={email}
-                                        onChange={e =>setEmail(e.target.value)}
+                                        onChange={ev =>setEmail(ev.target.value)}
                                         rightIcon={HiMail}
                                         id="email1"
                                         placeholder="benutzer*in@gmx.com"
@@ -102,7 +107,7 @@ export default function RegisterModalPlane() {
                                     </div>
                                     <TextInput
                                         value={password}
-                                        onChange={e =>setPassword(e.target.value)}
+                                        onChange={ev =>setPassword(ev.target.value)}
                                         id="passwordFirst"
                                         placeholder="*******"
                                         required

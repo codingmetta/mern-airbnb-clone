@@ -1,8 +1,34 @@
 'use client';
 import { Button, Checkbox, Label, TextInput } from 'flowbite-react';
 import { HiMail } from 'react-icons/hi';
+import React from 'react';
+import axios from 'axios';
 
 export default function LoginModalPlane() {
+
+const [email, setEmail] = React.useState('');
+const [password, setPassword] = React.useState('');
+const [redirect, setRedirect] = React.useState('false');
+
+
+async function loginUser(ev) {
+    ev.preventDefault();
+
+    try {
+        await axios.post('/login', {
+            email,
+            password
+            }
+        );    
+        alert('Du wurdest erfolgreich eingeloggt.');
+        setRedirect(true);  
+    } catch (e) {
+        alert ('Ups! Falsche E-Mail/Passwort.')
+    }
+    
+
+};
+
     return (
         <>
             <div id="defaultModalLogin" tabIndex="-1" aria-hidden="true" className="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -22,7 +48,7 @@ export default function LoginModalPlane() {
                         </div>
 
                         {/*Modal Main Section*/}
-                        <form className="flex flex-col max-w-lg w-full  p-1 gap-2">
+                        <form className="flex flex-col max-w-lg w-full  p-1 gap-2" onSubmit={loginUser}>
                             <div className="p-4 pb-8 space-y-6 border-b ">
                                 <div>
                                     <div className="hidden mb-2 block">
@@ -32,6 +58,8 @@ export default function LoginModalPlane() {
                                         />
                                     </div>
                                     <TextInput
+                                        value={email}
+                                        onChange={ev =>setEmail(ev.target.value)}
                                         rightIcon={HiMail}
                                         id="email1"
                                         placeholder="user@gmx.com"
@@ -47,14 +75,16 @@ export default function LoginModalPlane() {
                                         />
                                     </div>
                                     <TextInput
+                                        value={password}
+                                        onChange={ev =>setPassword(ev.target.value)}
                                         id="password1"
-                                        placeholder="*******"
+                                        placeholder=""
                                         required
                                         type="password"
                                     />
                                 </div>
                                 <div className="flex text-sm  items-center justify-between ">
-                                    <div className="flex gap-2 pr-2 items-center ">
+                                    <div className="hidden flex gap-2 pr-2 items-center ">
                                         <Checkbox id="remember" />
                                         <Label htmlFor="remember" className="text-gray-400 font-medium">
                                             Eingeloggt bleiben
