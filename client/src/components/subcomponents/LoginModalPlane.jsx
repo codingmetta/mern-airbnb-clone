@@ -78,7 +78,7 @@ async function loginUser(ev) {
                                         value={password}
                                         onChange={ev =>setPassword(ev.target.value)}
                                         id="password1"
-                                        placeholder=""
+                                        placeholder="*******"
                                         required
                                         type="password"
                                     />

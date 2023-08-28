@@ -101,14 +101,14 @@ export default function RegisterModalPlane() {
                                 <div>
                                     <div className="mb-2 block">
                                         <Label
-                                            htmlFor="passwordFirst"
+                                            htmlFor="password-register"
                                             value="Passwort eingeben"
                                         />
                                     </div>
                                     <TextInput
                                         value={password}
                                         onChange={ev =>setPassword(ev.target.value)}
-                                        id="passwordFirst"
+                                        id="password-register"
                                         placeholder="*******"
                                         required
                                         type="password"

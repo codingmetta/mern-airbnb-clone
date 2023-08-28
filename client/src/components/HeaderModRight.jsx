@@ -3,7 +3,7 @@ import AvatarMenu from "./AvatarMenu";
 
 export default function HeaderModRight() {
     return (
-        <>
+
             <div className="flex items-center gap-[1.15rem]">
                 <span className="text-[0.85rem] tracking-wide font-medium">Als Gastgeber:in loslegen</span>
                 <button>
@@ -14,6 +14,6 @@ export default function HeaderModRight() {
                 </button>
                 <AvatarMenu />
             </div>
-        </>
+
     );
 }
