@@ -29,7 +29,7 @@ mongoose.connect(process.env.MONGO_URL);
 
 //ENDPOINTS
 app.get('/test', (req,res)=> {
-    res.json('test successs')
+    res.json('test sucss')
 });
 
 app.post('/register', async (req, res)=> {

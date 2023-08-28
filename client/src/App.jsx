@@ -4,6 +4,9 @@ import 'flowbite';
 import {Route, Routes} from 'react-router-dom';
 import IndexPage from './pages/IndexPage.jsx';
 import LoginPage from './pages/LoginPage.jsx';
+import Main from './components/Main';
+import RegisterModalPlane from './components/subcomponents/RegisterModalPlane';
+import LoginModalPlane from './components/subcomponents/LoginModalPlane';
 import Layout from './Layout';
 import axios from 'axios';
 
@@ -13,9 +16,8 @@ axios.defaults.withCredentials = true;
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<IndexPage />} />
-        <Route path="/login" element={<LoginPage />} />
+      <Route element={<Layout />}>
+        <Route path="/" element={<Main />} />
       </Route>
     </Routes>
   );

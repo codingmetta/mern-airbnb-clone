@@ -31,7 +31,7 @@ async function loginUser(ev) {
 
     return (
         <>
-            <div id="defaultModalLogin" tabIndex="-1" aria-hidden="true" className="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div id="defaultModalLogin" tabIndex="-1" aria-hidden="true" className="fixed top-0 left-0 right-0 z-50 hidden bg-gray-400/50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
                 <div className="relative w-full max-w-lg max-h-full">
                     <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
                         {/*Modal Header Section*/}
@@ -62,7 +62,7 @@ async function loginUser(ev) {
                                         onChange={ev =>setEmail(ev.target.value)}
                                         rightIcon={HiMail}
                                         id="email1"
-                                        placeholder="user@gmx.com"
+                                        placeholder="@gmx.de"
                                         required
                                         type="email"
                                     />
@@ -100,7 +100,7 @@ async function loginUser(ev) {
 
                             {/*Modal Submit Section*/}
                             <div className="flex p-4 rounded-b dark:border-gray-600">
-                                <Button type="submit" className="bg-primary w-full shadow-sm shadow-primary/50 text-white focus:ring-2 focus:ring-primary/50 focus:outline-none ">
+                                <Button type="submit" className="bg-primary w-full shadow-sm shadow-primary/50 text-white focus:ring-2 focus:ring-primary/50 focus:outline-none " data-modal-hide="defaultModalLogin">
                                     Einloggen
                                 </Button>
                             </div>
