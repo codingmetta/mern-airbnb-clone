@@ -17,7 +17,7 @@ export default function Header() {
                     </div>
 
                     <div className="pl-[5rem] pr-[6rem]">
-                    <Subheader />
+                        <Subheader />
                     </div>
             </header>
             

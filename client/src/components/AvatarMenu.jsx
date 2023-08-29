@@ -12,10 +12,10 @@ export default function AvatarMenu() {
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 fill-none stroke-black scale-125" strokeWidth={2} viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
-                        <Avatar 
-                            rounded 
-                            size="md" 
-                            className="scale-75" 
+                        <Avatar
+                            rounded
+                            size="md"
+                            className="scale-75"
                         />
                     </div>
                 </button>
@@ -23,37 +23,41 @@ export default function AvatarMenu() {
                 {/*Dropdown Menu*/}
                 <div id="dropdownNavbar" className="z-10  tracking-wide text-sm font-extralight hidden bg-white divide-y divide-gray-100 rounded-xl shadow-[0px_0px_14px_0px_rgba(0,0,0,0.1)] w-56 dark:bg-gray-700 dark:divide-gray-600">
                     <ul className="py-2 text-sm text-gray-700 dark:text-gray-400 space-y-1" aria-labelledby="dropdownLargeButton">
+
+                        {/* Element toggles modal registration */}
                         <li>
-                        <Link>
-                                <label data-modal-target="defaultModalRegister" data-modal-toggle="defaultModalRegister" className="text-sm font-medium text-gray-700 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" type="button">
-                                    Registrieren
-                                </label>
-                         </Link>
+                            <label data-modal-target="defaultModalRegister" data-modal-toggle="defaultModalRegister" className="text-sm font-medium text-gray-700 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" type="button">
+                                Registrieren
+                            </label>
                         </li>
 
-                        {/*Element toggles modal Login*/}
+                        {/* Element toggles modal Login */}
                         <li>
-                        <Link>
                             <label data-modal-target="defaultModalLogin" data-modal-toggle="defaultModalLogin" className="text-sm text-gray-700 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" type="button">
                                 Einloggen
                             </label>
-                         </Link>
                         </li>
                     </ul>
 
                     <div className="py-1">
                         <ul className="py-2 text-sm text-gray-700 dark:text-gray-400 space-y-1" >
                             <li>
-                                <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Als Gastgeber:in loslegen</a>
+                                {/* TODO: Link ergänzen */}
+                                <Link>
+                                    <label className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Als Gastgeber:in loslegen</label>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Hilfe-Center</a>
+                                {/*TODO: Link ergänzen */}
+                                <Link>
+                                    <label className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Hilfe-Center</label>
+                                </Link>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            
+
         </>
     );
 }

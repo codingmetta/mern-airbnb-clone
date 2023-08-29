@@ -3,3 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.subheader-btn {
+    @apply flex flex-col items-center border-white border-b-2 hover:text-black hover:border-gray-300 focus:text-black focus:border-black gap-2 pt-3 font-medium text-xs antialiased text-gray-500
+}

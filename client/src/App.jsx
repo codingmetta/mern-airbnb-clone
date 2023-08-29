@@ -5,9 +5,7 @@ import {Route, Routes} from 'react-router-dom';
 
 
 import Main from './components/Main';
-import RegisterModalPlane from './components/subcomponents/RegisterModalPlane';
-import LoginModalPlane from './components/subcomponents/LoginModalPlane';
-
+import Wow from './pages/Wow.jsx';
 import Layout from './Layout';
 import axios from 'axios';
 
@@ -19,6 +17,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Main />} />
+        <Route path="/wow" element={<Wow />} />
       </Route>
     </Routes>
   );
