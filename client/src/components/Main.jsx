@@ -5,9 +5,9 @@ import Card from "./Card";
 export default function Main() {
     return (
         <div>
-            <LoginModalPlane />
+            <LoginModalPlane />      
             <RegisterModalPlane />
-        </div>
+         </div>
 
     );
 }

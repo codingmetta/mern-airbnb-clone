@@ -1,6 +1,6 @@
 export default function Card() {
     return (
-            <div className="block max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="block max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 pt-24 pl-12 ">
                 <a href="#">
                     <img className="w-48 h-48" src="images/profile-katja.jpg" alt="" />
                 </a>
