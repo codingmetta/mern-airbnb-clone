@@ -18,11 +18,18 @@ body {
 }
 
 .subheader-btn {
-    @apply flex flex-col items-center border-white border-b-2 hover:text-black hover:border-gray-300 focus:text-black focus:border-black gap-2 pt-3 font-medium text-xs antialiased text-gray-500
+    @apply flex flex-col tracking-[-0.003em] font-semibold text-[0.72rem]  items-center gap-2 border-white border-b-2 hover:text-black hover:border-gray-300 focus:text-black focus:border-black  pt-3  antialiased text-gray-500
 }
 
 .site-wrapper {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+.card--stats {
+    display: flex;
+    align-items: center;
+}
+.card--price {
+    margin-top: auto;
 }

@@ -14,7 +14,7 @@ export default function Main() {
                 img={item.coverImg}
                 rating={item.stats.rating}
                 reviewCount={item.stats.reviewCount}
-                city={item.location}
+                location={item.location}
                 country={item.country}
                 price={item.price}
                 isBusiness={item.isBusiness}
@@ -27,8 +27,8 @@ export default function Main() {
             <LoginModalPlane />      
             <RegisterModalPlane />
 
-            <section className="flex">
-                {cards}
+            <section className="flex flex-wrap pt-4 pl-[5rem] pr-[5rem] gap-5">
+                {cards}{cards}
             </section>
             
 

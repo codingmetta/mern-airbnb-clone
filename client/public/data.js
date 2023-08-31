@@ -58,7 +58,7 @@ export default [
         title: "",
         price: 131,
         isBusiness: true,
-        coverImg: "images/SCR-20230830-lypv.pngg",
+        coverImg: "images/SCR-20230830-lypv.png",
         stats: {
             rating: 4.9,
             reviewCount: 2
