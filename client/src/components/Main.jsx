@@ -23,8 +23,8 @@ export default function Main() {
     }) 
 
     return (
-        <div className="flex ">
-            <section className="flex flex-wrap pt-4 pl-[5rem] pr-[5rem] gap-5">
+        <div className="flex w-full">
+            <section className="flex flex-wrap w-full  pl-[5rem] pr-[5rem] gap-6">
                 {cards}{cards}
             </section>
             

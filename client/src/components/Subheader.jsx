@@ -11,10 +11,10 @@ export default function Subheader() {
 
     return (
         <>
-            <div className="max-w-full mx-auto dark:bg-gray-700 pt-6">
+            <div className="max-w-full mx-auto dark:bg-gray-700 pt-5">
                 <div className="flex items-center">
 
-                    <div className="flex flex-row gap-10 ">
+                    <div className="flex flex-row gap-11 ">
 
                         <NavLink 
                             to="/"

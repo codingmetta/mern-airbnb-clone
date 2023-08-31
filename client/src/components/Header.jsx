@@ -15,7 +15,7 @@ export default function Header() {
                 <HeaderModRight />
             </div>
 
-            <div className="pl-[5rem] pr-[6rem] w-full">
+            <div className="pb-4 pl-[5rem] pr-[6rem] w-full">
                 <Subheader />
             </div>
             
