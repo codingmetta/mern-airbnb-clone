@@ -18,7 +18,7 @@ body {
 }
 
 .subheader-btn {
-    @apply flex flex-col tracking-[-0.003em] font-semibold text-[0.72rem]  items-center gap-2 border-white border-b-2 hover:text-black hover:border-gray-300 focus:text-black focus:border-black  pt-3  antialiased text-gray-500
+    @apply flex flex-col  font-semibold text-[0.74rem]  items-center gap-2 border-white border-b-2 hover:text-black hover:border-gray-300 focus:text-black focus:border-black  pt-3  antialiased text-gray-500
 }
 
 .site-wrapper {

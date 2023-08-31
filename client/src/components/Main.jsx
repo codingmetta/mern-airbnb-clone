@@ -24,9 +24,6 @@ export default function Main() {
 
     return (
         <div className="flex ">
-            <LoginModalPlane />      
-            <RegisterModalPlane />
-
             <section className="flex flex-wrap pt-4 pl-[5rem] pr-[5rem] gap-5">
                 {cards}{cards}
             </section>
