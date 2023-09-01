@@ -134,9 +134,9 @@ export default function HostStartPage() {
 
             </main>
 
-            <footer className="p-6 bg-gray-200 items-center flex flex-col">
+            <footer className="p-6 bg-gray-200 items-center flex flex-col pl-80 pr-80 w-full">
 
-                <div className="upper-footer border flex flex-col w-3/4">
+                <div className="upper-footer border flex flex-col">
                     <div className="flex flex-row border border-gray-800">
 
                         <div className="border border-gray-800 text-4xl w-1/2">
@@ -208,7 +208,7 @@ export default function HostStartPage() {
                                     </div>
                                 </div>
                                 <h2 id="accordion-flush-heading-4">
-                                    <button type="button" className="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-4">
+                                    <button type="button" className="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
                                     <span className="font-light">
                                             Welche Tipps gibt es dafür, ein:e großartige:r Gastgeber:in auf Airbnb zu sein?
                                         </span>
@@ -217,7 +217,7 @@ export default function HostStartPage() {
                                         </svg>
                                     </button>
                                 </h2>
-                                <div id="accordion-flush-body-4" className="hidden" aria-labelledby="accordion-flush-heading-3">
+                                <div id="accordion-flush-body-4" className="hidden" aria-labelledby="accordion-flush-heading-4">
                                     <div className="py-5 border-b border-gray-200 dark:border-gray-700">
                                         <p className="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
                                         <p className="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
@@ -230,7 +230,7 @@ export default function HostStartPage() {
                                 </div>
 
                                 <h2 id="accordion-flush-heading-5">
-                                    <button type="button" className="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-4">
+                                    <button type="button" className="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-4">
                                     <span className="font-light">
                                             Welche Gebühren berechnet Airbnb?
                                         </span>
@@ -239,7 +239,7 @@ export default function HostStartPage() {
                                         </svg>
                                     </button>
                                 </h2>
-                                <div id="accordion-flush-body-5" className="hidden" aria-labelledby="accordion-flush-heading-3">
+                                <div id="accordion-flush-body-5" className="hidden" aria-labelledby="accordion-flush-heading-5">
                                     <div className="py-5 border-b border-gray-200 dark:border-gray-700">
                                         <p className="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
                                         <p className="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
