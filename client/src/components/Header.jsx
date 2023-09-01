@@ -1,21 +1,21 @@
 'use client';
 
-import Logo from './Logo';
-import SearchBar from './SearchBar';
-import HeaderModRight from './HeaderModRight';
-import Subheader from './Subheader';
+import Logo from './headerSubcomponents/Logo';
+import SearchBar from './headerSubcomponents/SearchBar';
+import HeaderModRight from './headerSubcomponents/HeaderModRight';
+import Subheader from './headerSubcomponents/Subheader';
 
 export default function Header() {
     return (
-        <header className=" flex flex-col w-full bg-white items-center content-center dark:bg-gray-900 dark:border-gray-700">
+        <header className="flex flex-col w-full bg-white items-center content-center dark:bg-gray-900 dark:border-gray-700">
 
-            <div className="pl-[5rem] pr-[6rem] w-full border border-zinc-200 flex flex-wrap items-center justify-between mx-auto pt-[15.5px] pb-[15.5px]">
+            <div className="  w-full pl-[5rem] pr-[6rem] border border-zinc-200 flex flex-wrap items-center justify-between mx-auto pt-[15.5px] pb-[15px]">
                 <Logo />
                 <SearchBar />
                 <HeaderModRight />
             </div>
 
-            <div className="pb-4 pl-[5rem] pr-[6rem] w-full">
+            <div className=" pb-4 pl-[5rem] pr-[6rem] w-full"> 
                 <Subheader />
             </div>
             

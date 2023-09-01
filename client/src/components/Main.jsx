@@ -1,12 +1,10 @@
-import LoginModalPlane from "./subcomponents/LoginModalPlane";
-import RegisterModalPlane from "./subcomponents/RegisterModalPlane";
 import Card from "./Card";
-import data from "/public/data";
+import data from "/public/data.js";
 import React from "react";
 
 export default function Main() {
-    
-    
+
+
     const cards = data.map(item => {
         return (
             <Card
@@ -20,16 +18,14 @@ export default function Main() {
                 isBusiness={item.isBusiness}
             />
         )
-    }) 
+    })
 
     return (
         <div className="flex w-full">
-            <section className="flex flex-wrap w-full  pl-[5rem] pr-[5rem] gap-6">
+            <section className="flex flex-wrap w-full pl-[5rem] pr-[5rem] gap-6">
                 {cards}{cards}
             </section>
-            
-
-         </div>
+        </div>
 
     );
 }
