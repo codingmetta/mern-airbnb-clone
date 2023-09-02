@@ -1,6 +1,5 @@
 'use client';
-import { Link, NavLink } from "react-router-dom";
-import { Button } from "flowbite-react";
+import { NavLink } from "react-router-dom";
 
 export default function Subheader() {
     const activeStyles = {

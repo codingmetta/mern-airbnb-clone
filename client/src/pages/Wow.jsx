@@ -8,8 +8,6 @@ export default function Wow() {
                wir sind unglaubliche angebote  
                wir sind unglaubliche angebote  
                wir sind unglaubliche angebote  
-
-
             </p>
          </div>
     );
