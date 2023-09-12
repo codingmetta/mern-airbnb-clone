@@ -59,7 +59,7 @@ export default function ProfitExampler() {
                 </div>
             </section>
             <img
-                className="w-full md:w-3/5 object-cover rounded-xl"
+                className="profitexampler-img"
                 src="/images/dummy-card.png"
                 alt="Dummy Google Standort Karte"
             />
