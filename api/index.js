@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+//OBJECT MODELING TOOL
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -14,10 +15,10 @@ const jwtSecret ='iowqjd8923hbf3if';
 
 //MIDDLEWARE
 
-//JSON parser
+//-JSON parser
 app.use(express.json());
 
-//CORS allowance
+//-CORS allowance
 app.use(cors({
     credentials: true,
     origin: 'http://localhost:5173',

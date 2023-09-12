@@ -1,12 +1,14 @@
 'use client';
 import { NavLink } from "react-router-dom";
+import ProfitExampler from "../components/ProfitExampler";
+import JumboCard from "../components/JumboCard";
+import AirCover from "../components/airCover";
+import FAQSection from "../components/FAQSection";
 
 
 export default function HostStartPage() {
     return (
         <>
-
-            {/*Navigation Bar*/}
             <header className="bg-white fixed top-0 pb-4 pt-4 pl-80 pr-80 w-full">
                 <nav className="flex flex-row items-center justify-between container mx-auto ">
                     <NavLink
@@ -30,236 +32,21 @@ export default function HostStartPage() {
             </header>
 
 
-            {/* Main Section*/}
-            <main className="flex flex-col items-center pt-40 gap-40  pl-80 pr-80">
+            <main className="hostpage-main-layout">
 
-                {/* First Section*/}
-                <div className="flex flex-row justify-around gap-4">
-                    {/* Left Side*/}
-                    <section className="bg-white self-end pb-8 dark:bg-gray-900">
+                <ProfitExampler />
 
-                        <div className="flex flex-col content-center items-center text-center gap-8">
+                <JumboCard />
 
-                            <div className="flex flex-col items-center">
-                                <h1 className="mb-2 text-4xl font-normal leading-none text-primary">Lege als Gastgeber:in los.</h1>
-                                <p className="mb-6 text-4xl font-normal text-gray-900 pr-20 pl-20 leading-10">Das könntest du dir dazuverdienen:</p>
-                                <p className="mb-6 text-7xl font-medium text-gray-900 dark:text-gray-400">1.030 €</p>
-
-                                <div className="flex flex-row gap-1 ">
-                                    <p className="underline font-normal">7 Nächte
-                                    </p>
-
-                                    <p className="font-extralight ">
-                                        zum Preis von ca. 147 € pro Nacht
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Slider and Label*/}
-                            <div className="flex flex-col w-96 gap-6">
-
-                                {/* TODO: onChange handler hinzufügen zu Input */}
-                                <div className="slidecontainer">
-                                    <input id="not-disabled-range" type="range" min="1" max="100" value="20" className="slider appearance-none cursor-pointer" readOnly />
-                                </div>
-
-                                <NavLink>
-                                    <label htmlFor="not-disabled-range" className="block font-light mb-2 text-sm text-gray-500 dark:text-white underline">Erfahre, wie wir deine Einkünfte einschätzen.</label>
-                                </NavLink>
-                            </div>
-
-                            {/* Suchelement*/}
-                            <div className="flex flex-row content-center items-center border border-gray-200 rounded-full h-16 pr-16 pl-6 pt-8 pb-8 gap-4 ">
-                                <div className="">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" strokeWidth={2.5} className="relative scale-[1.3] stroke-primary w-4 h-4">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                                    </svg>
-                                </div>
-                                <div className="flex flex-col text-md text-left">
-                                    <p className="font-semibold ">Köln</p>
-                                    <p className="font-thin text-gray-500">Gesamte Unterkunft • 2 Schlafzimmer</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-
-                    {/* Right Side*/}
-                    <section className="rounded-xl w-3/5">
-                        <img className="w-full object-cover rounded-xl" src="/images/dummy-card.png" alt="Google Standort Karte" />
-                    </section>
-
-                </div>
-
-                {/* Second Section*/}
-                <div className="flex flex-col">
-
-                    <img className="w-full h-auto object-cover rounded-xl" src="/images/banner-second-section.png" alt="Lege als Gastgeber:in los – mit der Airbnb-Starthilfe" />
-
-                    <div className="flex flex-row gap-8 pt-10 pl-8 pr-8">
-
-                        <div className="-text-box">
-                            <h3 className="tracking-tight text-xl">Individuelle Beratung durch Superhosts</h3>
-                            <p className="font-extralight text-gray-500">
-                                Wir weisen neuen Gastgeber:innen wie dir einen Superhost in deiner Gegend zu. Diese Person begleitet dich von deiner ersten Frage bis zu deinem ersten Gast – per Telefon, Videoanruf oder Chat.
-                            </p>
-                        </div>
-                        <div className="-text-box">
-                            <h3 className="tracking-tight text-xl">Ein erfahrener Gast für deine erste Buchung
-                            </h3>
-                            <p className="font-extralight text-gray-500">
-                                Bei deiner ersten Buchung hast du die Möglichkeit, einen erfahrenen Gast aufzunehmen. Solche Gäste müssen mindestens drei Aufenthalte mit positiven Bewertungen abgeschlossen haben.</p>
-
-                        </div>
-                        <div className="-text-box">
-                            <h3 className="tracking-tight text-xl">Spezielle Unterstützung von Airbnb
-                            </h3>
-                            <p className="font-extralight text-gray-500">
-                                Neue Gastgeber:innen erhalten mit nur einem Fingertipp Kontakt zu speziell geschulten Mitarbeiter:innen des Community-Supports. Diese können bei allen Fragen helfen – von Problemen mit dem Airbnb-Konto bis hin zur Unterstützung beim Thema Gebühren.</p>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                {/* Third Section*/}
-
-                <div className="flex flex-col items-center text-center ">
-                    <img className="w-48 h-auto object-cover" src="/images/aircover.png" alt="Abbildung von Aircover Logo" />
-                    <p className="text-5xl">
-                        Lege mit dem Rundum-Schutz als Gastgeber:in los
-                    </p>
-                </div>
-
+                <AirCover />
 
             </main>
 
-            <footer className="p-6 bg-gray-200 items-center flex flex-col pl-80 pr-80 w-full">
+            <footer className="hostpage-footer-layout">
 
-                <div className="upper-footer border flex flex-col">
-                    <div className="flex flex-row border border-gray-800">
+                <FAQSection />
 
-                        <div className="border border-gray-800 text-4xl w-1/2">
-                            Antworten auf deine Fragen
-                        </div>
-
-                        {/*Accordion*/}
-                        <div className="border border-gray-800 w-1/2 text-2xl">
-
-                            <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
-                                <h2 id="accordion-flush-heading-1">
-                                    <button type="button" className="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
-                                        <span className="font-light">
-                                            Eignet sich meine Unterkunft für Airbnb?
-                                        </span>
-                                        <svg data-accordion-icon className="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
-                                        </svg>
-                                    </button>
-                                </h2>
-
-                                <div id="accordion-flush-body-1" className="hidden" aria-labelledby="accordion-flush-heading-1">
-                                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                        <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                            Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.
-                                        </p>
-                                        <p className="text-gray-500 dark:text-gray-400">
-                                            Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
-                                    </div>
-                                </div>
-
-                                <h2 id="accordion-flush-heading-2">
-                                    <button type="button" className="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
-                                    <span className="font-light">
-                                            Muss ich ständig Gäste aufnehmen?
-                                        </span>
-                                        <svg data-accordion-icon className="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
-                                        </svg>
-                                    </button>
-                                </h2>
-
-                                <div id="accordion-flush-body-2" className="hidden" aria-labelledby="accordion-flush-heading-2">
-                                    <div className="py-5 border-b border-gray-200 dark:border-gray-700">
-                                        <p className="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-                                        <p className="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" className="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
-                                    </div>
-                                </div>
-
-                                <h2 id="accordion-flush-heading-3">
-                                    <button type="button" className="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
-                                    <span className="font-light">
-                                            Wie intensiv soll ich mit Gästen interagieren?
-                                        </span>
-                                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
-                                        </svg>
-                                    </button>
-                                </h2>
-                                <div id="accordion-flush-body-3" className="hidden" aria-labelledby="accordion-flush-heading-3">
-                                    <div className="py-5 border-b border-gray-200 dark:border-gray-700">
-                                        <p className="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
-                                        <p className="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
-                                        <p className="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                                        <ul className="pl-5 text-gray-500 list-disc dark:text-gray-400">
-                                            <li><a href="https://flowbite.com/pro/" className="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
-                                            <li><a href="https://tailwindui.com/" rel="nofollow" className="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <h2 id="accordion-flush-heading-4">
-                                    <button type="button" className="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
-                                    <span className="font-light">
-                                            Welche Tipps gibt es dafür, ein:e großartige:r Gastgeber:in auf Airbnb zu sein?
-                                        </span>
-                                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
-                                        </svg>
-                                    </button>
-                                </h2>
-                                <div id="accordion-flush-body-4" className="hidden" aria-labelledby="accordion-flush-heading-4">
-                                    <div className="py-5 border-b border-gray-200 dark:border-gray-700">
-                                        <p className="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
-                                        <p className="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
-                                        <p className="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                                        <ul className="pl-5 text-gray-500 list-disc dark:text-gray-400">
-                                            <li><a href="https://flowbite.com/pro/" className="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
-                                            <li><a href="https://tailwindui.com/" rel="nofollow" className="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <h2 id="accordion-flush-heading-5">
-                                    <button type="button" className="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-4">
-                                    <span className="font-light">
-                                            Welche Gebühren berechnet Airbnb?
-                                        </span>
-                                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
-                                        </svg>
-                                    </button>
-                                </h2>
-                                <div id="accordion-flush-body-5" className="hidden" aria-labelledby="accordion-flush-heading-5">
-                                    <div className="py-5 border-b border-gray-200 dark:border-gray-700">
-                                        <p className="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
-                                        <p className="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
-                                        <p className="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                                        <ul className="pl-5 text-gray-500 list-disc dark:text-gray-400">
-                                            <li><a href="https://flowbite.com/pro/" className="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
-                                            <li><a href="https://tailwindui.com/" rel="nofollow" className="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                    <div className="border border-gray-800">Banner</div>
-
-                </div>
-                <div className="lower-footer">
+                <section className="lower-footer">
 
                     <div className="upper-lower-footer content-center text-sm font-thin leading-6 flex gap-10 border border-gray-400">
 
@@ -314,7 +101,7 @@ export default function HostStartPage() {
 
                     </div>
 
-                </div>
+                </section>
 
             </footer>
         </>

@@ -1,6 +1,5 @@
 import Card from "./Card";
 import data from "/public/data.js";
-import React from "react";
 
 export default function Main() {
 
