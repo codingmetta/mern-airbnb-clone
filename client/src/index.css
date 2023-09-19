@@ -17,7 +17,37 @@ body {
     margin: 0;
     padding: 0;
 }
+.header-layout {
+  @apply
+  flex flex-col 
+  w-full 
+  bg-white  dark:bg-gray-900
+  items-center 
+  content-center 
+  dark:border-gray-700
 
+}
+
+.upper-navbar-layout {
+  @apply
+  w-full 
+  flex flex-nowrap 
+  items-center 
+  justify-between
+  border border-gray-200  
+  mx-auto 
+  pt-[15.5px] pb-[15px]
+  pl-4 md:pl-6 lg:pl-[5rem] 
+  pl-4 md:pl-6 lg:pr-[6rem] 
+}
+
+.lower-navbar-layout{
+  @apply
+  w-full
+  pb-4 
+  pl-4 md:pl-[5rem] 
+  pr-4 md:pr-[6rem] 
+}
 .host-navbar {
     @apply w-full flex flex-row justify-between h-12 pt-8 
 }
@@ -28,9 +58,7 @@ body {
     flex-direction: column;
 }
 
-.subheader-btn {
-    @apply flex flex-col font-semibold text-[0.74rem] items-center gap-2 border-white border-b-2 hover:text-black hover:border-gray-300 focus:text-black focus:border-black pt-3 antialiased text-gray-500
-}
+
 
 .card--stats {
     display: flex;
@@ -102,7 +130,62 @@ input[type="range"]::-moz-range-thumb{
   pr-10 md:pr-80
 }
 
+/*MAIN Section Homepage*/
+.cards-layout{
+  @apply
+  flex flex-wrap 
+  w-full 
+  pl-[5rem] 
+  pr-[5rem] 
+  gap-6
+}
 
+/*CARD*/
+
+.inserat-card-layout{
+  @apply
+  max-w-sm 
+  pb-3 leading-5 
+  tracking-[0.03rem] 
+  text-[14.5px]
+   bg-white 
+   rounded-xl
+  }
+
+  .inserat-card-img{
+    @apply
+    w-[16.9rem]
+     h-[16.2rem]
+      object-cover
+       rounded-xl
+  }
+
+
+  .inserat-card-heading{
+    @apply
+    flex 
+    flex-row  
+    items-center 
+    justify-between
+    pt-2
+  }
+
+  .card-rating-layout{
+    @apply
+    flex items-center pt-1 gap-1
+  }
+
+  .inserat-card-body{
+    @apply
+    text-gray-500 
+    font-extralight
+    pb-2
+  }
+
+  .inserat-card-footer{
+    margin-top: auto;
+    @apply leading-8  font-light
+  }
 /*JUMBOCARD*/
 .jumbocard-layout{
   @apply 
@@ -187,6 +270,62 @@ input[type="range"]::-moz-range-thumb{
     text-gray-500 dark:text-gray-400
   }
 
+/*Searchbar*/
+
+
+
+/*Searchbar-Old version layouts*/
+.searchbar-layout{
+  @apply
+  md:divide-x 
+  min-h-min 
+  flex items-center 
+  tracking-[0.0125em] 
+  text-sm lg:text-[14px] 
+  text-gray-800 
+  shadow-[0px_0px_4px_0px_rgba(0,0,0,0.07)] 
+  border border-gray-200
+  rounded-full 
+   pt-[0.7rem]
+  pb-[0.7rem] 
+  pr-2.5 
+  pl-2
+}
+/*Subheader*/
+
+.subheader-layout{
+  @apply
+  max-w-full 
+  mx-auto 
+  dark:bg-gray-700 
+  pt-5
+  flex flex-row overflow-x-auto md:overflow-x-hidden gap-11
+}
+
+
+
+.subheader-btn {
+  @apply 
+  flex flex-col 
+  font-semibold 
+  text-[0.74rem] 
+  items-center 
+  gap-2 
+  border-white 
+  border-b-2 
+  hover:text-black 
+  hover:border-gray-300 
+  focus:text-black 
+  focus:border-black 
+  pt-3 antialiased 
+  text-gray-500
+}
+
+
+.subheader-btn > h2 {
+  @apply
+  whitespace-nowrap 
+}
 
   /*ProfitExampler*/
   .profitexampler-layout {

@@ -1,5 +1,5 @@
 import Card from "./Card";
-import data from "/public/data.js";
+import data from "/public/data/mock-data.js";
 
 export default function Main() {
 

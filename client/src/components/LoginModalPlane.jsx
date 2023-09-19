@@ -27,7 +27,7 @@ async function loginUser(ev) {
     }
     
 
-};
+}
 
     return (
         <>
