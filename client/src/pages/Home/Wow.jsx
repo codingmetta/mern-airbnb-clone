@@ -5,7 +5,7 @@ export default function Wow() {
     return(
         <div>
             <p className="text-9xl">
-               Placeholder
+               Platzhalter
             </p>
          </div>
     );

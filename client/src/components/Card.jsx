@@ -1,8 +1,18 @@
-import React from "react";
+import PropTypes from 'prop-types';
+
+
+Card.propTypes = {
+    img: PropTypes.string,
+    location: PropTypes.string,
+    country: PropTypes.string,
+    rating: PropTypes.number,
+    isBusiness: PropTypes.bool,
+    price: PropTypes.number
+};
 
 export default function Card(props) {
 
-
+    
     return (
         <article className="inserat-card-layout">
             <a href="#">
@@ -38,7 +48,8 @@ export default function Card(props) {
                 }
                 <p>8.-13. Nov.</p>
             </div>
-            <p className="inserat-card-footer"><span className="font-semibold">{props.price} €</span> Nacht</p>
+            <p className="inserat-card-footer">
+                <span className="font-semibold">{props.price} €</span> Nacht</p>
         </article>
     );
 }

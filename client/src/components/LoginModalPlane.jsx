@@ -8,7 +8,7 @@ export default function LoginModalPlane() {
 
 const [email, setEmail] = React.useState('');
 const [password, setPassword] = React.useState('');
-const [redirect, setRedirect] = React.useState('false');
+//const [redirect, setRedirect] = React.useState(false);
 
 
 async function loginUser(ev) {
@@ -21,12 +21,10 @@ async function loginUser(ev) {
             }
         );    
         alert('Du wurdest erfolgreich eingeloggt.');
-        setRedirect(true);  
+        //setRedirect(true);  
     } catch (e) {
         alert ('Ups! Falsche E-Mail/Passwort.')
     }
-    
-
 }
 
     return (

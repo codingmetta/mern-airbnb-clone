@@ -1,5 +1,6 @@
-export default function JumboCard() {
+export default function SuperHostCard() {
     return (
+
         <section className="jumbocard-layout">
 
             <img
@@ -31,5 +32,6 @@ export default function JumboCard() {
 
             </div>
         </section>
+
     );
 }

@@ -1,11 +1,10 @@
-
-import Accordion from "./Accordion";
+import Accordion from "../../components/Accordion";
 export default function FAQSection() {
     return (
-        <section className="flex flex-col">
+        <div className="flex flex-col">
             <article className="faq-layout">
 
-                <p className=" w-full md:w-1/2 text-2xl md:text-4xl">
+                <p className="w-full md:w-1/2 text-2xl md:text-4xl">
                     Antworten auf deine Fragen
                 </p>
 
@@ -16,6 +15,6 @@ export default function FAQSection() {
 
             {/*TODO: Banner "Noch weitere Fragen?"*/}
             <div className="border border-gray-800"></div>
-        </section>
+        </div>
     );
 }

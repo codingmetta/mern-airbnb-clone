@@ -1,7 +1,7 @@
-import Card from "./Card";
+import Card from "../../components/Card";
 import data from "/public/data/mock-data.js";
 
-export default function Main() {
+export default function Popular() {
 
 
     const cards = data.map(item => {
@@ -21,7 +21,7 @@ export default function Main() {
 
     return (
         <div className="flex w-full">
-            <section className="flex flex-wrap w-full pl-[5rem] pr-[5rem] gap-6">
+            <section className="cards-layout">
                 {cards}{cards}
             </section>
         </div>

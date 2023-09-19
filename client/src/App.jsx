@@ -2,13 +2,13 @@
 import 'flowbite';
 
 import {Route, Routes} from 'react-router-dom';
-
-import Layout from './Layout';
-import Main from './components/Main';
-import Wow from './pages/Wow.jsx';
-import HostStartPage from './pages/HostStartPage';
-
+import Layout from './pages/Home/index.jsx';
+import Popular from './pages/Home/Popular';
+import Wow from './pages/Home/Wow.jsx';
+import HostGuide from './pages/HostGuide/index.jsx';
 import axios from 'axios';
+
+
 axios.defaults.baseURL = 'http://localhost:4000';
 axios.defaults.withCredentials = true;
 
@@ -17,7 +17,7 @@ function App() {
     <Routes>
 
       <Route path="/"            element={<Layout />}>
-        <Route index                element={<Main />} />
+        <Route index                element={<Popular />} />
         <Route path="wow"           element={<Wow />} />
         <Route path="tiny-houses"   element={<Wow />} />
         <Route path="pools"         element={<Wow />} />
@@ -35,7 +35,7 @@ function App() {
         <Route path="wine-regions"  element={<Wow />} />
       </Route>
 
-      <Route path="/host/homes"    element={<HostStartPage />}/>
+      <Route path="/host/homes"    element={<HostGuide />}/>
 
     </Routes>
   );
